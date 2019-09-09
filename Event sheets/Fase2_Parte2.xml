@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fase2_Parte2</name>
+    <events>
+        <variable comment="Check if the player touched the trap" constant="0" name="OnTrap" sid="447575626911914" static="0" type="number">0</variable>
+        <event-block sid="242987804962183">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="468287884546669" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="813543853020577" type="Life_Text_Count_Fase3">
+                    <param id="0" name="Text">vida</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="862825566593230" type="personagem">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="641915238035750" type="Alien_Predador">
+                    <param id="0" name="Animation">&quot;stop&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="788375637525949" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="508153849782693" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="568754807536266" type="Alien_Predador">
+                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="137624710799514" type="player">
+                    <param id="0" name="Magnitude">10</param>
+                    <param id="1" name="Duration">60</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="702781506357730" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="849466213865008" type="Alien_Predador">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="509170152359953" type="Correntes">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="489283919908083" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="371316480552596" type="System">
+                    <param id="0" name="Variable">OnTrap</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="728679705397059" type="Audio">
+                    <param id="0" name="Audio file">Arrival</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="338459845762101" title="Movimentos e Animações5">
+            <sub-events>
+                <event-block sid="889434351845321">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="963061351340253" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="106022315365098" type="personagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="661572693820952">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="291144633620161" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="523815846762576" type="personagem">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814524221567718">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="849768742855796" type="player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="346436114242180" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="206930160530317" type="personagem">
+                            <param id="0" name="Animation">&quot;running&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="134894560539330">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="614121034824130" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="780479220133662" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="467357642985368">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="309891140723040" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="604717269363630" type="personagem">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="982905640298534">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="250137876237416" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="596880836051620" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="528358250329861">
+            <conditions>
+                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="574793050048349" type="player" />
+                <condition id="1" name="Is overlapping another object" sid="195415677042230" type="player">
+                    <param id="0" name="Object">Invisible_Trap</param>
+                </condition>
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="351408735618350" type="player" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="952321670121832" type="player">
+                    <param id="0" name="Y">player.Y-10</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="407157104605666" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="735093107647891" type="Lava_Trap">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="794301830648587" type="Lava_Trap">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="812668231829984" type="player">
+                    <param id="0" name="Angle">player.Angle+25</param>
+                </action>
+                <action id="-9" name="Set value" sid="824643238390909" type="System">
+                    <param id="0" name="Variable">OnTrap</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="490047986927472">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="302948042274288" type="player">
+                    <param id="0" name="Object">Vulcao_Fase3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="265455896804817" type="System">
+                    <param id="0" name="Layout">Fase2</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="921038519427319" type="player">
+                    <param id="0" name="Magnitude">0</param>
+                    <param id="1" name="Duration">0</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="158582136888921" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="0" name="Set text" sid="629221912676593" type="Life_Text_Count_Fase3">
+                    <param id="0" name="Text">vida</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262237668663568">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="404398915463046" type="player">
+                    <param id="0" name="Object">Alien_Predador</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="945083338901484" type="System">
+                    <param id="0" name="Layout">Fase2</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="253302191945325" type="player">
+                    <param id="0" name="Magnitude">0</param>
+                    <param id="1" name="Duration">0</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="132570282912719" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="0" name="Set text" sid="789213609247601" type="Life_Text_Count_Fase3">
+                    <param id="0" name="Text">vida</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="632625416942257">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="552751687315637" type="Alien_Predador">
+                    <param id="0" name="Object">player</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="706008566243770" type="Correntes" />
+                <condition id="-14" name="Compare variable" sid="596239353494099" type="System">
+                    <param id="0" name="Variable">OnTrap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="724472085105355" type="Alien_Predador">
+                    <param id="0" name="X">Alien_Predador.X+5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="521040021633546">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="358494474176591" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="166476702514678" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="498759267517724">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="940771925813164" type="player">
+                    <param id="0" name="Object">Portal2_Fase3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="957677851684329" type="player">
+                    <param id="0" name="Magnitude">0</param>
+                    <param id="1" name="Duration">0</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="705714846999046" type="System">
+                    <param id="0" name="Layout">Stage3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="214975822976951">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="662766963839477" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="571668280217556" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

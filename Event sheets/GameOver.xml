@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver</name>
+    <events>
+        <event-block sid="494359449414743">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="199162766741466" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_playgame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="816253785742610" type="System">
+                    <param id="0" name="Layout">Enredo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="911477591636290">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="697603635715463" type="Mouse">
+                    <param id="0" name="Object">btn_playgame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="774935806865716" type="btn_playgame">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327715713334677">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="396184616642152" type="Mouse">
+                    <param id="0" name="Object">btn_playgame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="471640466533720" type="btn_playgame">
+                    <param id="0" name="Opacity">80</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="768930619970984">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="867258709218486" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="715682407278666" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="179576366796539">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="487977249292538" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="993003851807067" type="Audio">
+                    <param id="0" name="Audio file">Game Over Sound Effect (free)</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="124030189346546">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="452052128722263" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="746778362826294" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

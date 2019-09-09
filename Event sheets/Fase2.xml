@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fase2</name>
+    <events>
+        <variable comment="Represents if the portal is blocked or not" constant="0" name="portal_block" sid="425797636284089" static="0" type="number">1</variable>
+        <variable comment="Check if the user has got the key" constant="0" name="has_key" sid="566292302664667" static="0" type="number">0</variable>
+        <event-block sid="771521209464930">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="966609158187456" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="565488217845635" type="Life_Text_Count_Fase3">
+                    <param id="0" name="Text">vida</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="231912935005359" type="personagem">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="213068010572953" type="Enemy1">
+                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="673953945992776" type="Particles_Spaceship">
+                    <param id="0" name="Pin to">Spaceship</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="961298832420513" type="Particle_Spaceship2">
+                    <param id="0" name="Pin to">Spaceship2</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="524470930661300" type="Particle_Spaceship3">
+                    <param id="0" name="Pin to">Spaceship3</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="515321849919700" type="Enemy2">
+                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="972415869092886" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="653827836703324" type="Parede_Gaiola_Fase2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="333032587904235" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="859489515915920" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="577497900907624" type="Audio">
+                    <param id="0" name="Audio file">Arrival</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="125056389659183" type="System">
+                    <param id="0" name="Variable">portal_block</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="741610890105031" title="Movimentos e Animações4">
+            <sub-events>
+                <event-block sid="120633632630490">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="188758768340022" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="921776865080369" type="personagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="656965010831039">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="432474606449210" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="444898007714095" type="personagem">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872144938201901">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="914218834344480" type="player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="901198786257567" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="942510626832802" type="personagem">
+                            <param id="0" name="Animation">&quot;running&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531501564338235">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="781317977119654" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="433043901629670" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822885351318783">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="252840293489283" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="987057360298620" type="personagem">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="820331146653432">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="586819755289655" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="944207869599374" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="157793507869892">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="899539334931432" type="player">
+                    <param id="0" name="Object">Floor_Trap1_Fase3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="406504010872392" type="Floor_Trap1_Fase3">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-16" name="Wait" sid="567918108296736" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="170314112614409" type="Floor_Trap1_Fase3">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="891774155215278" type="Floor_Trap1_Fase3">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="852985536090720" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="979354746896336" type="Floor_Trap1_Fase3">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="669704130527678" type="Floor_Trap1_Fase3">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="220767938803255">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="563278951662130" type="player">
+                    <param id="0" name="Object">Plaform_Trap_1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="948491004775418" type="System">
+                    <param id="0" name="Variable">has_key</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="267948442237720" type="Plaform_Trap_1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="407282798559594" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="333743626516858" type="Plaform_Trap_1">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="380917501761465">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="800674471624028" type="player">
+                    <param id="0" name="Object">Key</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="859279771308511" type="System">
+                    <param id="0" name="Variable">has_key</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="104368822985733" type="System">
+                    <param id="0" name="Variable">has_key</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="564861257046417" type="Key">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">3</param>
+                </action>
+                <action id="-8" name="Set angle" sid="826828225087072" type="Seta">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Sine" id="3" name="Set movement" sid="478643632764574" type="Seta">
+                    <param id="0" name="Movement">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="868204720935386" type="Seta_2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="406956151421867" type="Chao2_Fase3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="436517128862536" type="Chao2_Fase3">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="493236413805756" type="Enemy1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="648006849997774" type="Enemy2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="724962234888327">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="901222235055730" type="player">
+                    <param id="0" name="Object">Key_Stone_Fase3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="528730164734019" type="System">
+                    <param id="0" name="Variable">portal_block</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="117385084476369" type="Key" />
+                <action id="-3" name="Set position" sid="180862564788474" type="Key">
+                    <param id="0" name="X">86.948</param>
+                    <param id="1" name="Y">400</param>
+                </action>
+                <action id="-15" name="Set visible" sid="628308902789492" type="Seta">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="211980542858353" type="Seta_2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="350384596657318" type="Seta_3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="980759224486827" type="Particles">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="455029474045296" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="950239124108353" type="Portal1_Fase3">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-8" name="Scroll to object" sid="174891018214288" type="System">
+                    <param id="0" name="Object">Portal1_Fase3</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="897089602968226" type="Portal1_Fase3">
+                    <param id="0" name="Magnitude">60</param>
+                    <param id="1" name="Duration">2</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="975673798311128" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="589542597679135" type="Parede_Fase3" />
+                <action id="-16" name="Wait" sid="363911143726658" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="165180451578042" type="Portal1_Fase3">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="937731763058029" type="System">
+                    <param id="0" name="Variable">portal_block</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="634953190951044" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="816587852637459" type="System">
+                    <param id="0" name="Variable">portal_block</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="500859806651775">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="141344296826757" type="player">
+                    <param id="0" name="Object">Portal1_Fase3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="710606578944925" type="System">
+                    <param id="0" name="Variable">portal_block</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="840959603127845" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="685707218945798" type="System">
+                    <param id="0" name="Layout">Fase2_Parte2</param>
+                </action>
+                <action id="-9" name="Set value" sid="122013869636985" type="System">
+                    <param id="0" name="Variable">has_key</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="925521689020049">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="476048249154271" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="676013786808453" type="personagem">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="All the scripts for Enemies" sid="207838601497939" title="Enemies">
+            <sub-events>
+                <event-block sid="264266774694848">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="720653961450743" type="System">
+                            <param id="0" name="First value">Enemy1.Sine.CyclePosition</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0.75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="884382139844915" type="Enemy1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="657095710545086">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="940197496801931" type="System">
+                            <param id="0" name="First value">Enemy1.Sine.CyclePosition</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="815496340113083" type="Enemy1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="597059178539791">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="452980438071941" type="System">
+                            <param id="0" name="Value">Enemy1.Sine.CyclePosition</param>
+                            <param id="1" name="Lower bound">0.25</param>
+                            <param id="2" name="Upper bound">0.75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="764626440015392" type="Enemy1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="914483206878922">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="145262676065551" type="System">
+                            <param id="0" name="First value">Enemy2.Sine.CyclePosition</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0.75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="954832945232922" type="Enemy2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575265834255210">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="349327231885228" type="System">
+                            <param id="0" name="First value">Enemy2.Sine.CyclePosition</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="185619861657934" type="Enemy2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="195158756585565">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="269279790677544" type="System">
+                            <param id="0" name="Value">Enemy2.Sine.CyclePosition</param>
+                            <param id="1" name="Lower bound">0.25</param>
+                            <param id="2" name="Upper bound">0.75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="284221955077323" type="Enemy2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Test the collision of the player with other enemies" sid="338675641191975" title="Collisions Tests">
+            <sub-events>
+                <event-block sid="704801630445815">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="799189620196147" type="player">
+                            <param id="0" name="Object">Enemy1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="852743865063593" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="568417591833754" type="player">
+                            <param id="0" name="X">141</param>
+                            <param id="1" name="Y">798</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="367022882828851" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="755935289374198" type="Floor_Trap1_Fase3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="137660094658480" type="Floor_Trap1_Fase3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="539462762533647" type="System">
+                            <param id="0" name="Variable">has_key</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="394306443189797" type="Key">
+                            <param id="0" name="X">1491</param>
+                            <param id="1" name="Y">507</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="454473191677537" type="Key" />
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="383668875095094" type="Plaform_Trap_1">
+                            <param id="0" name="Cycle position">0.5</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="372150100132525" type="Chao2_Fase3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="951530066684072" type="Chao2_Fase3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="668482654001227" type="Life_Text_Count_Fase3">
+                            <param id="0" name="Text">vida</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="920037019145350" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="784967892924791" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="500676161804456" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="280972937841651" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="668270122778465" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="986014600280901" type="Enemy1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="287321932258598" type="Enemy2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="551929218960296" type="System">
+                            <param id="0" name="Variable">portal_block</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="323460508887999" type="Seta_3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="421814168472330">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="268316156997621" type="player">
+                            <param id="0" name="Object">Enemy2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="281654410792325" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="956721010765483" type="player">
+                            <param id="0" name="X">141</param>
+                            <param id="1" name="Y">798</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="824891049513034" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="129031303228396" type="Floor_Trap1_Fase3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="589283922921277" type="Floor_Trap1_Fase3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="933270605091551" type="System">
+                            <param id="0" name="Variable">has_key</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="364725539836287" type="Key">
+                            <param id="0" name="X">1491</param>
+                            <param id="1" name="Y">507</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="463164013144330" type="Key" />
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="885088727027786" type="Plaform_Trap_1">
+                            <param id="0" name="Cycle position">0.5</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="921545645817993" type="Chao2_Fase3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="471892442094961" type="Chao2_Fase3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="912016040205436" type="Life_Text_Count_Fase3">
+                            <param id="0" name="Text">vida</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="987659597591172" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="470557840007347" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="390683465322351" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="224126804870448" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="741526479882181" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="832107363675330" type="Enemy1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="201683354594920" type="Enemy2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="349254830340369" type="System">
+                            <param id="0" name="Variable">portal_block</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="675759346369429" type="Seta_3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="335979221986774">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="574761171554885" type="player">
+                            <param id="0" name="Object">Spaceship</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="356992530626597" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="330712194508079" type="player">
+                            <param id="0" name="X">141</param>
+                            <param id="1" name="Y">798</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="638520845457315" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="908378013707016" type="Floor_Trap1_Fase3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="683608395174708" type="Floor_Trap1_Fase3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="419565213213389" type="System">
+                            <param id="0" name="Variable">has_key</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="652600173685612" type="Key">
+                            <param id="0" name="X">1491</param>
+                            <param id="1" name="Y">507</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="292348166072351" type="Key" />
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="760451423700568" type="Plaform_Trap_1">
+                            <param id="0" name="Cycle position">0.5</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="803182362897687" type="Chao2_Fase3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="625165981465703" type="Chao2_Fase3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="565116506427119" type="Life_Text_Count_Fase3">
+                            <param id="0" name="Text">vida</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="737284095582579" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="327063848754409" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="393680412808634" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="475824379745454" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="506703385266710" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="955144444590798" type="Enemy1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="965334836801742" type="Enemy2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="604243028649043" type="System">
+                            <param id="0" name="Variable">portal_block</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="760763284894724" type="Seta_3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="837556312320161">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="752465690909534" type="player">
+                            <param id="0" name="Object">Spaceship2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="526121286990880" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="837782759247132" type="player">
+                            <param id="0" name="X">141</param>
+                            <param id="1" name="Y">798</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="606724725632885" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="415151995305395" type="Floor_Trap1_Fase3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="668351059841394" type="Floor_Trap1_Fase3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="228574376543086" type="System">
+                            <param id="0" name="Variable">has_key</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="669598038177698" type="Key">
+                            <param id="0" name="X">1491</param>
+                            <param id="1" name="Y">507</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="674457171558028" type="Key" />
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="812757105129430" type="Plaform_Trap_1">
+                            <param id="0" name="Cycle position">0.5</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="213782603279148" type="Chao2_Fase3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="667729702953947" type="Chao2_Fase3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="800855030724630" type="Life_Text_Count_Fase3">
+                            <param id="0" name="Text">vida</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="512681080446942" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="961931342263316" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="917442968005207" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="277398810052912" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="691353436876141" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="510621848724716" type="Enemy1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="883196395277417" type="Enemy2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="587341599123846" type="System">
+                            <param id="0" name="Variable">portal_block</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="712105662364261" type="Seta_3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="468138192642517">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="817092734129983" type="player">
+                            <param id="0" name="Object">Spaceship3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="241958332770612" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="590492431555736" type="player">
+                            <param id="0" name="X">141</param>
+                            <param id="1" name="Y">798</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="320103378320860" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="941644878474893" type="Floor_Trap1_Fase3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="579212873476798" type="Floor_Trap1_Fase3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="287350685313532" type="System">
+                            <param id="0" name="Variable">has_key</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="775624288581549" type="Key">
+                            <param id="0" name="X">1491</param>
+                            <param id="1" name="Y">507</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="415523469935797" type="Key" />
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="153561950143383" type="Plaform_Trap_1">
+                            <param id="0" name="Cycle position">0.5</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="255459356440331" type="Chao2_Fase3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="443759602387853" type="Chao2_Fase3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="149235380275494" type="Life_Text_Count_Fase3">
+                            <param id="0" name="Text">vida</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="491757374900375" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="792314323333784" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="266173085277016" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="665910608636742" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="991516321036352" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="869727118381380" type="Enemy1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="428828966533353" type="Enemy2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="574867411761831" type="System">
+                            <param id="0" name="Variable">portal_block</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="825185254039893" type="Seta_3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="770447189846634">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="439898769077091" type="player">
+                            <param id="0" name="Object">Chao_Limite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="959999343197731" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="442174400290626" type="player">
+                            <param id="0" name="X">141</param>
+                            <param id="1" name="Y">798</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="874572121536302" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="688962035067920" type="Floor_Trap1_Fase3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="688382565305147" type="Floor_Trap1_Fase3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="375700882548736" type="System">
+                            <param id="0" name="Variable">has_key</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="939192704725071" type="Key">
+                            <param id="0" name="X">1491</param>
+                            <param id="1" name="Y">507</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="388605847758219" type="Key" />
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="618890728829227" type="Plaform_Trap_1">
+                            <param id="0" name="Cycle position">0.5</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="636107978737450" type="Chao2_Fase3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="476652033655002" type="Chao2_Fase3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="537648888615829" type="Life_Text_Count_Fase3">
+                            <param id="0" name="Text">vida</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="520187605206103" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="949264555352411" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="489827788899469" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="121430721595000" type="Parede_Gaiola_Fase2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="939675314229380" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="667349603666247" type="Enemy1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="715709960138656" type="Enemy2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="808324017671279" type="System">
+                            <param id="0" name="Variable">portal_block</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="979959798722740" type="Seta_3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="658520602960762">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="859973709509149" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="262643160176819" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="677602853528983">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="990460156345846" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="586797830815937" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

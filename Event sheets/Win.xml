@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Win</name>
+    <events>
+        <event-block sid="102197610235453">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="449529812019897" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_playgame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="687075492612240" type="System">
+                    <param id="0" name="Layout">&quot;Enredo&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="363526336710486">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="238649808933700" type="Mouse">
+                    <param id="0" name="Object">btn_playgame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="339455000590769" type="btn_playgame">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="842471375381046">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="917169024157328" type="Mouse">
+                    <param id="0" name="Object">btn_playgame</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="744238713137656" type="btn_playgame">
+                    <param id="0" name="Opacity">80</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="188008699139007">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="859089006910840" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="733766312834028" type="Audio">
+                    <param id="0" name="Audio file">Victory - Free Sound Effect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="557428314702912">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="139664263096553" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="838474207828000" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

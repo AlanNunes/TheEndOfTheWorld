@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">Inicio</layout>
+    </open-tabs>
+    <properties>
+        <property expanded="0" name="Window Size" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Stage1/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/LavaBG2/" />
+        <folder expanded="1" path="animation-folder/LavaBG1/" />
+        <folder expanded="1" path="animation-folder/Stage1Rob/" />
+        <folder expanded="1" path="animation-folder/lava2/" />
+        <folder expanded="1" path="animation-folder/SpritRobot/" />
+        <folder expanded="1" path="animation-folder/Stage1Lever/" />
+        <folder expanded="1" path="animation-folder/Stage1Lever2/" />
+        <folder expanded="1" path="animation-folder/Stage1Portal2/" />
+        <folder expanded="1" path="animation-folder/Stage1Portal1/" />
+        <folder expanded="1" path="animation-folder/GPortal/" />
+        <folder expanded="1" path="animation-folder/CrystalStage1/" />
+        <folder expanded="1" path="animation-folder/CrystalStage1T/" />
+        <folder expanded="1" path="animation-folder/CystalStage2/" />
+        <folder expanded="1" path="animation-folder/CystalStage2T/" />
+        <folder expanded="1" path="animation-folder/CystalStage3/" />
+        <folder expanded="1" path="animation-folder/CystalStage3T/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/enemie1/" />
+        <folder expanded="1" path="animation-folder/player/" />
+        <folder expanded="1" path="animation-folder/plataforma/" />
+        <folder expanded="1" path="animation-folder/direciona_d/" />
+        <folder expanded="1" path="animation-folder/direciona_e/" />
+        <folder expanded="1" path="animation-folder/lava/" />
+        <folder expanded="1" path="animation-folder/serra/" />
+        <folder expanded="1" path="animation-folder/plat_btn/" />
+        <folder expanded="1" path="animation-folder/porta_btn/" />
+        <folder expanded="1" path="animation-folder/limit/" />
+        <folder expanded="1" path="animation-folder/porta/" />
+        <folder expanded="1" path="animation-folder/personagem/" />
+        <folder expanded="1" path="animation-folder/inv_plat/" />
+        <folder expanded="1" path="animation-folder/plat_air/" />
+        <folder expanded="1" path="animation-folder/element_box/" />
+        <folder expanded="1" path="animation-folder/enemie2/" />
+        <folder expanded="1" path="animation-folder/btn_playgame/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/next_btn/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/chefon/" />
+        <folder expanded="1" path="animation-folder/plat_air2/" />
+        <folder expanded="1" path="animation-folder/explosion/" />
+        <folder expanded="1" path="animation-folder/explosion2/" />
+        <folder expanded="1" path="animation-folder/Floor2_Fase3/" />
+        <folder expanded="1" path="animation-folder/Key/" />
+        <folder expanded="1" path="animation-folder/Coluna_Enfeite_Fase3/" />
+        <folder expanded="1" path="animation-folder/Key_Stone_Fase3/" />
+        <folder expanded="1" path="animation-folder/Plaform_Trap_1/" />
+        <folder expanded="1" path="animation-folder/Floor_Fase3/" />
+        <folder expanded="1" path="animation-folder/Floor_Trap1_Fase3/" />
+        <folder expanded="1" path="animation-folder/Parede_Fase3/" />
+        <folder expanded="1" path="animation-folder/Portal1_Fase3/" />
+        <folder expanded="1" path="animation-folder/Seta_3/" />
+        <folder expanded="1" path="animation-folder/Enemy1/" />
+        <folder expanded="1" path="animation-folder/Platform2_Fase3/" />
+        <folder expanded="1" path="animation-folder/Spaceship2/" />
+        <folder expanded="1" path="animation-folder/Spaceship/" />
+        <folder expanded="1" path="animation-folder/Chao_Limite/" />
+        <folder expanded="1" path="animation-folder/Spaceship3/" />
+        <folder expanded="1" path="animation-folder/Seta_2/" />
+        <folder expanded="1" path="animation-folder/Chao2_Fase3/" />
+        <folder expanded="1" path="animation-folder/Enemy2/" />
+        <folder expanded="1" path="animation-folder/Seta/" />
+        <folder expanded="1" path="animation-folder/Parede_Gaiola_Fase2/" />
+        <folder expanded="1" path="animation-folder/Floor_Fase3_Parte2/" />
+        <folder expanded="1" path="animation-folder/Lava_Trap/" />
+        <folder expanded="1" path="animation-folder/Trap_Trampolim/" />
+        <folder expanded="1" path="animation-folder/Invisible_Trap/" />
+        <folder expanded="1" path="animation-folder/Portal2_Fase3/" />
+        <folder expanded="1" path="animation-folder/Vulcao_Fase3/" />
+        <folder expanded="1" path="animation-folder/Alien_Predador/" />
+        <folder expanded="1" path="animation-folder/Correntes/" />
+        <folder expanded="1" path="animation-folder/Dialog/" />
+        <folder expanded="1" path="animation-folder/poder3/" />
+        <folder expanded="1" path="animation-folder/poder2/" />
+        <folder expanded="1" path="animation-folder/poder1/" />
+    </folders-expanded>
+</c2uistate>

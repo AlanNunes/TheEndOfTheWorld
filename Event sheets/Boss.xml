@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Boss</name>
+    <events>
+        <variable constant="0" name="chat" sid="763323243332835" static="0" type="number">0</variable>
+        <event-block sid="469092178363241">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="122388002962324" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="790394725692275" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Play" sid="820601347286337" type="Audio">
+                    <param id="0" name="Audio file">Into-Battle_v001</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="187433728079974" type="porta">
+                    <param id="0" name="Animation">&quot;opened&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="129981973487217" type="personagem">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Set text" sid="104468155615914" type="vidas">
+                    <param id="0" name="Text">&quot;x&quot;&amp;vida</param>
+                </action>
+                <action id="-16" name="Wait" sid="474180795849997" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Set text" sid="268838446577400" type="BossTalk">
+                    <param id="0" name="Text">&quot;Humano insolente! Como ousa nos enfrentar?&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="412256469462211" type="Dialog">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="464336189185186" type="BossTalk">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="879831706402990" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="819274592890834" type="BossTalk">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="925546061481337" type="Dialog">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="173664799276868" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="292170660258293" title="Movimentos e Animações2">
+            <sub-events>
+                <event-block sid="489179402882535">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="902033069827123" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="794255645261870" type="personagem">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621511071912144">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="794922596314312" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="819001492869873" type="personagem">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="446461953671792">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="181627182787194" type="player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="205703549097437" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="890406497640551" type="personagem">
+                            <param id="0" name="Animation">&quot;running&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="696271096023820">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="602360380403937" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="160118092174997" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="462760291122562">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="688129427852885" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="192012563523252" type="personagem">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="840446858726327">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="783877615694921" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="845742491401760" type="personagem">
+                            <param id="0" name="Animation">&quot;stop&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="362126854351408" title="Boss">
+            <sub-events>
+                <event-block sid="117777137528160">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="656693785880457" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="915946421299740" type="player">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="723447777584265" type="System">
+                            <param id="0" name="Variable">chat</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="309221830725074" type="System">
+                            <param id="0" name="Variable">chat</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="896564948648117" type="BossTalk">
+                            <param id="0" name="Text">&quot;O que é isso?!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="854258527891394" type="Dialog">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="683792819470452" type="BossTalk">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="121210464407558" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="571606060582000" type="BossTalk">
+                            <param id="0" name="Text">&quot;Não deveria existir algo assim nesse planeta!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="657738859271352" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="825239135272797" type="CrystalStage1T">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="298533441001697" type="CystalStage2T">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="464947523348877" type="CystalStage3T">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="636597371758617" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="320430456682527" type="BossTalk">
+                            <param id="0" name="Text">&quot;. . .&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="735895510219031" type="CrystalStage1T">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="197258697078068" type="CystalStage2T">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="667703504335404" type="CystalStage3T">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="121921214238172" type="CrystalStage1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="237789990850558" type="CystalStage2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="222006618869832" type="CystalStage3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="407226668467595" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="738330158496169" type="BossTalk">
+                            <param id="0" name="Text">&quot;Mas que p###a é essa?!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="620089076975046" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="836120344426026" type="poder1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="601994104657807" type="poder2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="513906824425560" type="poder3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="555754052767376" type="BossTalk">
+                            <param id="0" name="Text">&quot;NÃÃÃÃÃÃÃÃÃÃÃÃO!&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="246597433542925" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="769760593630322" type="poder1">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="491859113320866" type="poder2">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="694365395404932" type="poder3">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="347109855918990" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="170947463086859" type="poder1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="542063817922880" type="poder2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="200335662636023" type="poder3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="101893815745746" type="BossTalk">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="290532089439883" type="Dialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="325521567652378" type="explosion">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="707592252824724" type="explosion2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="305742857230057" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="760107029810517" type="explosion">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="501393169108981" type="explosion2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="914506208717499" type="chefon">
+                            <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="853295032207389" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="253541828066170" type="chefon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="846107055023136" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="218317396010131" type="System">
+                            <param id="0" name="Layout">&quot;Win&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="501762863591056">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="372750484746922" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="243358755199585" type="vida">
+                    <param id="0" name="Text">&quot;Vida: &quot;&amp;vida</param>
+                </action>
+                <action id="0" name="Set text" sid="521619303102566" type="Text">
+                    <param id="0" name="Text">&quot;Boxes: &quot;&amp;elements</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="538564750543539">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="910004678693135" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="246537317842296" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

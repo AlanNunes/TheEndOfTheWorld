@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enredo</name>
+    <events>
+        <event-block sid="679888868654001">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="882461203125076" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="242088769347816" type="Audio">
+                    <param id="0" name="Audio file">Dark-Things</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="367424379615609">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="321734510068783" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">next_btn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="932188131661258" type="System">
+                    <param id="0" name="Layout">Stage1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593352750375205">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="305610995766209" type="Mouse">
+                    <param id="0" name="Object">next_btn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="412092590226185" type="next_btn">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="930857727563409">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="641948176059143" type="Mouse">
+                    <param id="0" name="Object">next_btn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="463365217350179" type="next_btn">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="830992188122200">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="863606377816534" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="321187349347916" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
