@@ -1,6 +1,6 @@
-# O que é The End Of The World ?
+# What is The End Of The World ?
 The End Of The World is a fun and challanger game! I bet you are going to like it.
-## História
+## History
 The World is under attack by elemental aliens and to avoid that you need to gather three ancestral stones. We REALLY need your help!
 
 ## Why this game ?
